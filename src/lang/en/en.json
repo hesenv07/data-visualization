@@ -8,6 +8,7 @@
   "site_url": "Site URL",
   "close": "Close",
   "cancel": "Cancel",
+  "required_message": "Enter {{name}}",
   "total_price": "Total Price:",
   "save": "Save",
   "profile": "Profile",

@@ -13,6 +13,7 @@
   "profile": "Profil",
   "personal_information": "Şəxsi Məlumatlar",
   "firstname": "Ad",
+  "required_message": "{{name}} daxil edin",
   "lastname": "Soyad",
   "father_name": "Ata adı",
   "address": "Ünvan",
