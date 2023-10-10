@@ -6,18 +6,10 @@ import {
   modalsReducer,
   loadingReducer,
   alertReducer,
-  notificationReducer,
   aboutUsReducer,
 } from "./slices";
 
-import {
-  authApi,
-  paymentApi,
-  userApi,
-  staticApi,
-  notificationApi,
-  productsApi,
-} from "./apis";
+import { authApi, productsApi } from "./apis";
 
 export const store = configureStore({
   reducer: {
@@ -27,15 +19,10 @@ export const store = configureStore({
     loading: loadingReducer,
     modals: modalsReducer,
     alert: alertReducer,
-    notification: notificationReducer,
     aboutUs: aboutUsReducer,
 
     //apis rtk query
     [authApi.reducerPath]: authApi.reducer,
-    [paymentApi.reducerPath]: paymentApi.reducer,
-    [userApi.reducerPath]: userApi.reducer,
-    [staticApi.reducerPath]: staticApi.reducer,
-    [notificationApi.reducerPath]: notificationApi.reducer,
     [productsApi.reducerPath]: productsApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
@@ -43,11 +30,7 @@ export const store = configureStore({
       serializableCheck: false,
     })
       .concat(authApi.middleware)
-      .concat(paymentApi.middleware)
-      .concat(userApi.middleware)
-      .concat(notificationApi.middleware)
-      .concat(productsApi.middleware)
-      .concat(staticApi.middleware),
+      .concat(productsApi.middleware),
 });
 
 setupListeners(store.dispatch);

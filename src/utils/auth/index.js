@@ -1,10 +1,7 @@
-import { removeFromLocale } from "utils"
-import { setUserData, setAuthToken } from "store"
+import { setUserData } from "store";
 
 export const userLogout = () => {
-  return dispatch => {
-    removeFromLocale()
-    dispatch(setAuthToken(''))
-    dispatch(setUserData({}))
-  }
-}
+  return (dispatch) => {
+    dispatch(setUserData({}));
+  };
+};

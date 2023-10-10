@@ -1,14 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import { Breadcrumb, Select } from "components";
 import { languages } from "constants";
-import { userApi } from "store";
 import i18n, { t } from "i18next";
 import { setToLocale, getFromLocale } from "utils";
 
 const Settings = () => {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [lang, setLang] = useState(getFromLocale("language") || "en");
 
@@ -18,7 +15,6 @@ const Settings = () => {
     i18n.changeLanguage(value);
     setToLocale({ key: "language", value });
     navigate("/user/settings");
-    dispatch(userApi.util.resetApiState());
   };
 
   return (

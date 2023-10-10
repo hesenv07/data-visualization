@@ -1,18 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  userDomainCount: 0,
-  userHostingCount: 0,
-  userServiceCount: 0,
-  userVPSCount: 0,
-  userBalance: 0,
-  cropControls: { 
+  userProductCount: 0,
+  cropControls: {
     crop: {},
     rotate: 0,
-    zoom: 1
+    zoom: 1,
   },
   countryCode: "+994",
-  croppedImageRef: ''
+  croppedImageRef: "",
 };
 
 const commonSlice = createSlice({
@@ -22,30 +18,21 @@ const commonSlice = createSlice({
     setCountryCode: (state, { payload }) => {
       state.countryCode = payload;
     },
-    setCount(state, { payload: { key, value }}) {
-      state[key] = value
-    },
-    setUserBalance(state, { payload }) {
-      state.userBalance = payload
+    setCount(state, { payload: { key, value } }) {
+      state[key] = value;
     },
     setCropControls(state, { payload }) {
       state.cropControls = {
         ...state.cropControls,
-        ...payload
-      }
+        ...payload,
+      };
     },
     setCroppedImageRef(state, { payload }) {
-      state.croppedImageRef = payload
-    }
+      state.croppedImageRef = payload;
+    },
   },
 });
 
 export const commonReducer = commonSlice.reducer;
-export const { 
-  setCropControls, 
-  setCountryCode, 
-  setCount, 
-  setUserBalance,
-  setCroppedImageRef
-} =
+export const { setCropControls, setCountryCode, setCount, setCroppedImageRef } =
   commonSlice.actions;

@@ -62,7 +62,7 @@ export const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
       {/* <!-- SIDEBAR HEADER --> */}
       <div className="flex items-center ml-5 justify-between gap-2 px-6 py-5.5 md:py-6.5">
         <a href={main_page_url}>
-          <img src="agile-solutions-logo-small.png" className="dark:invert" />
+          <img src="/agile-solutions-logo-small.png" className="dark:invert" />
         </a>
         <button
           ref={trigger}

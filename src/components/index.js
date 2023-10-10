@@ -1,5 +1,4 @@
 export * from "./Icons";
-export * from "./Logo";
 export * from "./PhoneInput";
 export * from "./DataTable";
 export * from "./Breadcrumb";
