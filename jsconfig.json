@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./src",
+      "paths": {
+        "assets/*": ["assets/*"],
+        "components/*": ["components/*"],
+        "pages/*": ["pages/*"],
+        "constants/*": ["constants/*"],
+        "hooks/*": ["hooks/*"],
+        "store/*": ["store/*"],
+        "config/*": ["config/*"],
+        "shared/*": ["shared/*"],
+        "client/*": ["client/*"],
+        "utils/*": ["utils/*"],
+        "routes/*": ["routes/*"],
+        "layouts/*": ["layouts/*"],
+        "lang/*": ["lang/*"],
+      },
+      "target": "ESNext",
+      "lib": ["DOM", "DOM.Iterable", "ESNext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "module": "ESNext",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "noEmit": true,
+      "jsx": "react-jsx"
+    },
+    "include": ["src", "vite-env.d.ts"],
+    "exclude": ["node_modules"],
+  }
+  
